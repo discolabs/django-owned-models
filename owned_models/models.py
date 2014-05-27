@@ -4,8 +4,8 @@ from django.db import models
 
 class UserOwnedModelManager(models.Manager):
 
-    def filter_for_user(self, user):
-        return super(UserOwnedModelManager, self).get_queryset().filter(user = user)
+    def filter_for_user(self, user, *args, **kwargs):
+        return super(UserOwnedModelManager, self).get_queryset().filter(user = user, *args, **kwargs)
 
     def get_for_user(self, user, *args, **kwargs):
         if 'user' in kwargs:
