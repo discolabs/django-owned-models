@@ -12,6 +12,8 @@ class UserOwnedModelManager(models.Manager):
             kwargs.pop('user')
         return super(UserOwnedModelManager, self).get_queryset().get(user = user, *args, **kwargs)
 
+    def get_or_create_for_user(self, user, **kwargs):
+        return super(UserOwnedModelManager, self).get_or_create(user = user, **kwargs)
 
 class UserOwnedModel(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, editable = False)
