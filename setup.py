@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 version = __import__('owned_models').__version__
 
@@ -20,13 +20,9 @@ setup(
         'owned_models': 'owned_models',
     },
 
-    requires = [
-        'django',
-        'tastypie',
-    ],
-
     install_requires = [
-        'django',
+        'django >=1.6.5, <1.7',
+        'django-tastypie >=0.11.0',
     ],
 
     zip_safe = True,
