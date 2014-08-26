@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 version = __import__('owned_models').__version__
 
@@ -12,13 +12,7 @@ setup(
     url = 'https://github.com/discolabs/django-owned-models',
     license = 'MIT',
 
-    packages = [
-        'owned_models'
-    ],
-
-    package_dir = {
-        'owned_models': 'owned_models',
-    },
+    packages = find_packages(),
 
     install_requires = [
         'django >=1.6.5, <1.7',
