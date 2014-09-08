@@ -18,6 +18,11 @@ setup(
         'django >=1.7',
     ],
 
+    tests_requires = [
+        'django >=1.7',
+        'model_mommy >=1.2.1',
+    ],
+
     zip_safe = True,
     classifiers = [],
 )
