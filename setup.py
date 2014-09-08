@@ -15,8 +15,7 @@ setup(
     packages = find_packages(),
 
     install_requires = [
-        'django >=1.6.5, <1.7',
-        'django-tastypie >=0.11.0',
+        'django >=1.7',
     ],
 
     zip_safe = True,
